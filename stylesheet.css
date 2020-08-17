@@ -1,0 +1,321 @@
+PCの時は下部グローバルメニューは表示しない
+@media screen and (min-width:960px){
+	.navi-top{
+		display:none;
+	}
+}
+
+スマホの時は上部グローバルメニューは表示しない
+@media screen and (max-width:480px){
+	.bottom-menu{
+		display:none;
+	}
+}
+
+
+
+/*==============================================
+　共通部分
+================================================*/
+
+
+h1 {
+	border-bottom: solid 3px #cce4ff;
+	position: relative;
+}
+
+h1:after {
+	position: absolute;
+	content: " ";
+	display: block;
+	border-bottom: solid 4px #5472cd;
+	bottom: -3px;
+	width: 20%;
+}
+
+.logo{
+	height:24px;
+	width:80px;
+	padding-right:5px;
+}
+
+li{
+	list-style:none;
+}
+
+
+/*==============================================
+　body部分
+================================================*/
+body {
+  width: 90%; /* リキッド */
+  max-width: 1200px; /* 幅の上限 */
+  min-width: 200px; /* 幅の下限 */
+  margin: 0px auto;
+}
+
+
+
+/*==============================================
+　top menu部分
+================================================*/
+ul.navi-top, ul.navi-top a {
+        color:white;/*文字の色*/
+        background-color:#a6a0d9;/*メニューバーの背景色*/}
+
+ul.navi-top {
+	background-color:#a6a0d9;
+	position:fixed;
+	left:0;
+	top:0;
+   	margin: 0;
+   	padding:0;
+	font-size:14px;
+	width:100%;
+	text-align:center;
+	z-index:50;}/*重なり順*/
+
+
+ul.navi-top li {
+	width: 150px;
+   	display: inline-block;
+   	list-style-type: none;
+   	position: relative;}
+
+ul.navi-top a {
+   	line-height: 45px;/*メニューバーの高さ*/
+   	text-align: center;/*文字位置中央寄せ*/
+	padding-left:10px;
+   	text-decoration: none;
+   	font-weight: nomarl;
+   	display: block;}
+
+
+ul.navi-top li:hover ul {
+       display: block;}
+
+ul.navi-top a:hover {
+        color:white;/*マウスオーバーの時の文字の色*/
+        background-color:grey;/*マウスオーバーの時の背景色*/}
+
+
+
+
+/*========================
+　bottom menu部分
+　========================*/
+
+
+.mini-text{font-size:10px;}/*文字大きさ*/
+
+ul.bottom-menu {
+    position: fixed;
+    left:0;
+    bottom:0;
+    width: 100%;
+    height:45px;/*高さ*/
+    margin:0;
+    padding:0;
+    background-color:#f5f5f5;/*背景色*/
+    border-top:2px solid #808080;/*バーの上の線*/
+    border-bottom:2px solid #808080;/*バーの下の線*/
+    z-index:30;}
+
+ul.bottom-menu li {
+    float:left;
+    width:16%;
+    background-color:#f5f5f5;/*背景色*/
+    list-style-type:none;
+    text-align:center;
+    font-size:25px;/*アイコンのサイズ*/}
+
+.bottom-menu li a {
+    display: block;
+    color:#808080;/*アイコン＆文字の色*/
+    padding-top:10px;
+    padding-bottom:5px;
+    line-height:10px;
+    text-decoration:none;}
+
+.bottom-menu li a:hover {
+    color:#a9a9a9;/*マウスオーバー時の色*/}
+
+
+
+/*==============================================
+　main部分
+================================================*/
+.main{
+	padding-top:55px;
+	padding-bottom:55px;
+}
+
+
+/*==============================================
+　index部分
+================================================*/
+
+.body-index{
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -40px;
+    bottom: -40px;
+    width: auto;
+    height: auto;
+    background-image: url(./img/kiisback.jpg);
+    background-size: cover;
+    -webkit-filter: blur(5px);
+    z-index: -1;
+}
+
+.important{
+	border: 5px dashed rgb(200,55,255);
+}
+
+.important-info{
+	color:white;
+}
+
+
+/*==============================================
+　Login・SignUp部分
+================================================*/
+.body{
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -40px;
+    bottom: -40px;
+    width: auto;
+    height: auto;
+    background-image: url(./img/kiisback.jpg);
+    background-size: cover;
+    -webkit-filter: blur(5px);
+    z-index: 0;
+}
+
+.grad{
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -40px;
+    bottom: -40px;
+    width: auto;
+    height: auto;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))); /* Chrome,Safari4+ */
+    z-index: 1;
+    opacity: 0.7;
+}
+
+.login-title{
+	color:white;
+}
+
+.login{
+    position: absolute;
+    top:calc(50% - 75px);
+    left:calc(50% - 115px);
+    height: 150px;
+    width: 350px;
+    padding: 10px;
+    z-index: 2;
+}
+
+.login input[type=text]{
+    width: 300px;
+    height: 50px;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.6);
+    border-radius: 2px;
+    color: #fff;
+    font-family: 'Exo', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 4px;
+}
+
+.login input[type=password]{
+    width: 300px;
+    height: 50px;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.6);
+    border-radius: 2px;
+    color: #fff;
+    font-family: 'Exo', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 4px;
+    margin-top: 10px;
+}
+
+.login input[type=submit]{
+    width: 260px;
+    height: 35px;
+    background: #fff;
+    border: 1px solid #fff;
+    cursor: pointer;
+    border-radius: 2px;
+    color: #a18d6c;
+    font-family: 'Exo', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 6px;
+    margin-top: 10px;
+}
+
+.login input[type=submit]:hover{
+    opacity: 0.8;
+}
+
+.login input[type=submit]:active{
+    opacity: 0.6;
+}
+
+.login input[type=text]:focus{
+    outline: none;
+    border: 1px solid rgba(255,255,255,0.9);
+}
+
+.login input[type=password]:focus{
+    outline: none;
+    border: 1px solid rgba(255,255,255,0.9);
+}
+
+.login input[type=submit]:focus{
+    outline: none;
+}
+
+.login a{
+    color: #fff;
+    font-family: 'Exo', sans-serif;
+    font-size: 20px;
+}
+
+::-webkit-input-placeholder{
+   color: rgba(255,255,255,0.6);
+}
+
+::-moz-input-placeholder{
+   color: rgba(255,255,255,0.6);
+}
+
+
+
+/*==============================================
+　userpage部分
+================================================*/
+.button-ico{
+	height:140px;
+	width:140x;
+}
+
+
+
+/*==============================================
+　PageCreate部分
+================================================*/
+.mainbox{
+	display: inline-block;
+	vertical-align:top;
+}
